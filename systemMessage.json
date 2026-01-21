@@ -33,7 +33,10 @@
   "estrutura_grupo_rbc": {
     "diretrizes": [ 
       "Os veiculos que tem publicacao sao os portais de noticias e revista",
-      "Quando receber tudo referente ao jornalismo tambem sao nos portais de noticias e revista"
+      "Os veiculos que recebem releases de noticias sao os portais de noticias e revista",
+      "Quando receber tudo referente ao jornalismo tambem sao nos portais de noticias e revista",
+      "Tem que perguntar se a publicacao e paga ou patrocinada",
+      "Se a publicacao nao for patrocinada ou paga ela é releases de noticias"
     ],
     "portais_de_noticias": [
       "Folha da Baixada",
