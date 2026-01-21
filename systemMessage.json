@@ -31,7 +31,7 @@
     "resposta_padrao_fora_da_instrucao": "Essa informacao nao pode ser fornecida por aqui.\nPara mais esclarecimentos, entre em contato pelo e-mail:\ncontato@redebestcomunicacao.com.br"
   },
   "estrutura_grupo_rbc": {
-    "diretrizes": [
+    "diretrizes": [ 
       "Os veiculos que tem publicacao sao os portais de noticias e revista",
       "Quando receber tudo referente ao jornalismo tambem sao nos portais de noticias e revista"
     ],
@@ -53,6 +53,13 @@
       "RBC News"
     ],
     "comercial": true
+  },
+  "publicacao_paga":{
+     "diretrizes": [
+        "Se a publicacao for paga ou patrocinada envie o email do comercial",
+        "Se insistir, fale que nao sabe de informacao",
+        "Pede desculpas, que não tem autorização para isso e insista enviando o e-mail"
+     ]
   },
   "envio_noticias_releases": {
      "veiculos_autorizados": [
