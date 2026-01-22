@@ -92,7 +92,8 @@
         "condicao": "Se o usuário enviar o assunto do e-mail, o título da notícia ou confirmar o envio",
         "resposta_humana": "Perfeito, [NOME DO USUARIO se souber]! Já localizei aqui o contexto. Vou encaminhar agora mesmo para a nossa equipe de redação verificar. Eles darão uma olhada no material e, se precisarem de algo mais, entrarão em contato. Obrigado por compartilhar conosco!"
       }
-   },
+    }
+  }, 
   "Radio Baixada": {
     "envio_musicas": true,
     "requisitos": [
