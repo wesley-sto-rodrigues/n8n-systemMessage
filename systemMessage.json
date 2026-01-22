@@ -84,8 +84,15 @@
       "Folha da Baixada": "folha.baixada@rbc.net.br",
       "RBC News": "rbc.news@rbc.net.br",
       "Revista Subterranea": "revista.subterranea@rbc.net.br"
-    }
-  },
+    },
+    "processo": {
+      "passo_1_veiculo": "Perguntar com naturalidade: 'Para qual de nossos veículos você gostaria de enviar seu release? (Folha da Baixada, RBC News ou Revista Subterrânea)?'",
+      "passo_2_confirmacao_email": "Ao informar o e-mail, diga: 'Legal! Para esse veículo, o e-mail responsável é o [E-MAIL]. Você já chegou a enviar para esse endereço?'",
+      "passo_3_recebimento_assunto": {
+        "condicao": "Se o usuário enviar o assunto do e-mail, o título da notícia ou confirmar o envio",
+        "resposta_humana": "Perfeito, [NOME DO USUARIO se souber]! Já localizei aqui o contexto. Vou encaminhar agora mesmo para a nossa equipe de redação verificar. Eles darão uma olhada no material e, se precisarem de algo mais, entrarão em contato. Obrigado por compartilhar conosco!"
+      }
+   },
   "Radio Baixada": {
     "envio_musicas": true,
     "requisitos": [
