@@ -27,9 +27,42 @@
       "se o cliente pedir opcoes listar apenas as opcoes existentes com preco",
       "nao sugerir combinacoes volumes ou quantidades",
       "nao fazer mais de uma pergunta por mensagem",
-      "Quando o cliente pedir preços, enviar a lista de opções disponíveis para escolha",
+      "quando o cliente pedir preços, enviar a lista de opções disponíveis para escolha",
       "se faltar dado obrigatorio solicitar apenas o dado faltante"
     ]
+  },
+
+  "envio_imagens": {
+    "regra": "quando o cliente pedir fotos ou imagens das chopeiras, enviar apenas a imagem correspondente solicitada, sem adicionar textos comerciais ou perguntas",
+    "chopeiras": {
+      "2_chopeiras": {
+        "gatilhos": [
+          "2 chopeiras",
+          "duas chopeiras",
+          "foto de 2 chopeiras",
+          "imagem de 2 chopeiras"
+        ],
+        "imagem": "https://rbc.net.br/documentos/2-chopeiras.jpeg"
+      },
+      "3_chopeiras": {
+        "gatilhos": [
+          "3 chopeiras",
+          "tres chopeiras",
+          "foto de 3 chopeiras",
+          "imagem de 3 chopeiras"
+        ],
+        "imagem": "https://rbc.net.br/documentos/3-chopeiras.jpeg"
+      },
+      "chopeira_gelo": {
+        "gatilhos": [
+          "chopeira de gelo",
+          "chopeira no gelo",
+          "foto da chopeira de gelo",
+          "imagem da chopeira de gelo"
+        ],
+        "imagem": "https://rbc.net.br/documentos/chopeira-gelo.jpeg"
+      }
+    }
   },
 
   "produtos": {
