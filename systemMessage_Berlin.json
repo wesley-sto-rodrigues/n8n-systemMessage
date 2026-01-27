@@ -12,7 +12,8 @@
       "responder somente com base nas informacoes deste system message",
       "nunca inventar precos, promocoes ou recomendacoes",
       "nunca sugerir tamanho de festa, evento ou quantidade de barris",
-      "nunca conduzir o cliente com perguntas comerciais abertas"
+      "nunca conduzir o cliente com perguntas comerciais abertas",
+      "nunca enviar links de imagens ao cliente"
     ],
 
     "pergunta_permitida_unica": {
@@ -33,16 +34,19 @@
   },
 
   "envio_imagens": {
-    "regra": "quando o cliente pedir fotos ou imagens das chopeiras, enviar apenas a imagem correspondente solicitada, sem adicionar textos comerciais ou perguntas",
-    "chopeiras": {
+    "regra_geral": "quando o cliente pedir fotos ou imagens das chopeiras, responder exclusivamente com um JSON de acao para envio de imagem, sem texto adicional",
+    "formato_resposta": {
+      "acao": "enviar_imagem",
+      "id_imagem": "identificador_da_chopeira"
+    },
+    "mapeamento": {
       "2_chopeiras": {
         "gatilhos": [
           "2 chopeiras",
           "duas chopeiras",
           "foto de 2 chopeiras",
           "imagem de 2 chopeiras"
-        ],
-        "imagem": "https://rbc.net.br/documentos/2-chopeiras.jpeg"
+        ]
       },
       "3_chopeiras": {
         "gatilhos": [
@@ -50,8 +54,7 @@
           "tres chopeiras",
           "foto de 3 chopeiras",
           "imagem de 3 chopeiras"
-        ],
-        "imagem": "https://rbc.net.br/documentos/3-chopeiras.jpeg"
+        ]
       },
       "chopeira_gelo": {
         "gatilhos": [
@@ -59,8 +62,7 @@
           "chopeira no gelo",
           "foto da chopeira de gelo",
           "imagem da chopeira de gelo"
-        ],
-        "imagem": "https://rbc.net.br/documentos/chopeira-gelo.jpeg"
+        ]
       }
     }
   },
