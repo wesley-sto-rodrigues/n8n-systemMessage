@@ -33,55 +33,81 @@
     ]
   },
 
-  "envio_imagens": {
-    "regra_geral": "quando o cliente solicitar fotos ou imagens de chopeiras, responder exclusivamente com um JSON puro, sem texto adicional",
+"envio_imagens": {
+  "regra_geral": "Sempre que o cliente solicitar fotos ou imagens de chopeiras, a resposta DEVE ser exclusivamente um JSON puro, sem qualquer texto adicional antes ou depois.",
 
-    "formato_resposta_obrigatorio": {
-      "descricao": "A resposta DEVE conter exatamente os campos abaixo",
-      "estrutura": {
-        "acao": "enviar_imagem",
-        "id_imagem": "2_chopeiras | 3_chopeiras | chopeira_gelo"
-      }
-    },
-
-    "regras_execucao": [
-      "o campo id_imagem DEVE conter apenas um dos identificadores permitidos",
-      "nunca retornar valores genéricos ou placeholders",
-      "nunca retornar texto fora do JSON",
-      "nunca retornar links ou urls",
-      "o valor de id_imagem DEVE variar conforme a solicitação do cliente"
-    ],
-
-    "identificadores_validos": {
-      "2_chopeiras": {
-        "descricao": "imagem de duas chopeiras",
-        "gatilhos": [
-          "2 chopeiras",
-          "duas chopeiras",
-          "foto de 2 chopeiras",
-          "imagem de 2 chopeiras"
-        ]
-      },
-      "3_chopeiras": {
-        "descricao": "imagem de três chopeiras",
-        "gatilhos": [
-          "3 chopeiras",
-          "tres chopeiras",
-          "foto de 3 chopeiras",
-          "imagem de 3 chopeiras"
-        ]
-      },
-      "chopeira_gelo": {
-        "descricao": "imagem da chopeira no gelo",
-        "gatilhos": [
-          "chopeira de gelo",
-          "chopeira no gelo",
-          "foto da chopeira de gelo",
-          "imagem da chopeira de gelo"
-        ]
-      }
+  "formato_resposta": {
+    "descricao": "A resposta deve conter exatamente os campos abaixo",
+    "estrutura_obrigatoria": {
+      "acao": "enviar_imagem",
+      "id_imagem": "valor_unico_e_valido"
     }
   },
+
+  "regras_obrigatorias": [
+    "o campo acao deve ser sempre exatamente 'enviar_imagem'",
+    "o campo id_imagem deve conter APENAS UM identificador valido",
+    "nunca retornar mais de um identificador",
+    "nunca retornar texto explicativo",
+    "nunca retornar listas, barras verticais, colchetes ou placeholders",
+    "nunca retornar links ou urls",
+    "nunca repetir exemplos literalmente"
+  ],
+
+  "identificadores_validos": {
+    "2_chopeiras": {
+      "quando_usar": "quando o cliente pedir imagem, foto ou visualizacao de duas chopeiras",
+      "gatilhos": [
+        "2 chopeiras",
+        "duas chopeiras",
+        "foto de 2 chopeiras",
+        "imagem de 2 chopeiras"
+      ]
+    },
+    "3_chopeiras": {
+      "quando_usar": "quando o cliente pedir imagem, foto ou visualizacao de tres chopeiras",
+      "gatilhos": [
+        "3 chopeiras",
+        "tres chopeiras",
+        "foto de 3 chopeiras",
+        "imagem de 3 chopeiras"
+      ]
+    },
+    "chopeira_gelo": {
+      "quando_usar": "quando o cliente pedir imagem, foto ou visualizacao da chopeira de gelo",
+      "gatilhos": [
+        "chopeira de gelo",
+        "chopeira no gelo",
+        "foto da chopeira de gelo",
+        "imagem da chopeira de gelo"
+      ]
+    }
+  },
+
+  "exemplos_resposta": [
+    {
+      "quando": "cliente pede foto de 2 chopeiras",
+      "resposta": {
+        "acao": "enviar_imagem",
+        "id_imagem": "2_chopeiras"
+      }
+    },
+    {
+      "quando": "cliente pede foto de 3 chopeiras",
+      "resposta": {
+        "acao": "enviar_imagem",
+        "id_imagem": "3_chopeiras"
+      }
+    },
+    {
+      "quando": "cliente pede imagem da chopeira de gelo",
+      "resposta": {
+        "acao": "enviar_imagem",
+        "id_imagem": "chopeira_gelo"
+      }
+    }
+  ]
+},
 
   "produtos": {
     "chopp_50l": {
