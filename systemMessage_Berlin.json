@@ -27,6 +27,7 @@
       "se o cliente pedir opcoes listar apenas as opcoes existentes com preco",
       "nao sugerir combinacoes volumes ou quantidades",
       "nao fazer mais de uma pergunta por mensagem",
+      "Quando o cliente pedir preços, enviar a lista de opções disponíveis para escolha",
       "se faltar dado obrigatorio solicitar apenas o dado faltante"
     ]
   },
